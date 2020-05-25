@@ -2644,8 +2644,10 @@ export const actions = {
                         return 0;
                     }
                 },
-                Lumber(offset){ return global.race['kindling_kindred'] ? 0 : costMultiplier('basic_housing', offset, 10, 1.23); },
-                Stone(offset){ return global.race['kindling_kindred'] ? costMultiplier('basic_housing', offset, 10, 1.23) : 0; }
+		Lumbar(offset){ return 1; },
+		Stone(offset){ return 1;}
+                //Lumber(offset){ return global.race['kindling_kindred'] ? 0 : costMultiplier('basic_housing', offset, 10, 1.23); },
+                //Stone(offset){ return global.race['kindling_kindred'] ? costMultiplier('basic_housing', offset, 10, 1.23) : 0; }
             },
             effect: loc('plus_max_resource',[1111,loc('citizen')]),
             action(){
