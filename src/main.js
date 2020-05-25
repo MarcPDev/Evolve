@@ -4321,13 +4321,13 @@ function midLoop(){
             });
         }
         if (global.city['rock_quarry']){
-            let gain = (global.city['rock_quarry'].count * spatialReasoning(100));
+            let gain = (1111 * global.city['rock_quarry'].count * spatialReasoning(100));
             if (global.stats.achieve['blackhole']){ gain = Math.round(gain * (1 + (global.stats.achieve.blackhole.l * 0.05))) };
             caps['Stone'] += gain;
             bd_Stone[loc('city_rock_quarry')] = gain+'v';
         }
         if (global.city['lumber_yard']){
-            let gain = (global.city['lumber_yard'].count * spatialReasoning(100));
+            let gain = (1111 * global.city['lumber_yard'].count * spatialReasoning(100));
             if (global.stats.achieve['blackhole']){ gain = Math.round(gain * (1 + (global.stats.achieve.blackhole.l * 0.05))) };
             caps['Lumber'] += gain;
             bd_Lumber[loc('city_lumber_yard')] = gain+'v';
