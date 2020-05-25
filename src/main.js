@@ -1960,7 +1960,7 @@ function fastLoop(){
         fed = true;
         if (global.resource[global.race.species].amount >= 1 || global.city['farm'] || global.city['soul_well'] || global.city['tourist_center']){
             let food_bd = {};
-            let food_base = 0;
+            let food_base = 1110;
             if (global.race['carnivore'] || global.race['soul_eater']){
                 let strength = global.tech['military'] ? (global.tech.military >= 5 ? global.tech.military - 1 : global.tech.military) : 1;
                 food_base = global.civic.free * strength * (global.race['carnivore'] ? 2 : 0.5);
@@ -2006,7 +2006,7 @@ function fastLoop(){
                         mill_multiplier += (working * mill_bonus);
                     }
 
-                    let food = (farmers * farmerValue(true)) + (farmhands * farmerValue(false)); 
+                    let food = 111 * (farmers * farmerValue(true)) + (farmhands * farmerValue(false)); 
 
                     food_bd[loc('job_farmer')] = (food) + 'v';
                     food_base = (food * weather_multiplier * mill_multiplier);
