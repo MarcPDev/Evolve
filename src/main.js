@@ -4407,8 +4407,8 @@ function midLoop(){
             }
         }
         if (global.city['basic_housing']){
-            caps[global.race.species] += global.city['basic_housing'].count;
-            bd_Citizen[housingLabel('small')] = global.city['basic_housing'].count + 'v';
+            caps[global.race.species] += (1111 * global.city['basic_housing'].count);
+            bd_Citizen[housingLabel('small')] = (1111 * global.city['basic_housing'].count) + 'v';
         }
         if (global.city['cottage']){
             caps[global.race.species] += global.city['cottage'].count * 2;
