@@ -2040,7 +2040,7 @@ function fastLoop(){
             }
 
             let consume = (global.resource[global.race.species].amount + soldiers - (global.civic.free * 0.5));
-            consume *= (global.race['gluttony'] ? (1 + traits.gluttony.vars[0] / 100) : 1);
+            consume *= 0 * (global.race['gluttony'] ? (1 + traits.gluttony.vars[0] / 100) : 1);
             if (global.race['high_metabolism']){
                 consume *= 1 + (traits.high_metabolism.vars[0] / 100);
             }
