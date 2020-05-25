@@ -4788,7 +4788,7 @@ function midLoop(){
         }
         let pirate_alien2 = piracy('gxy_alien2');
         if (global.city['university']){
-            let multiplier = 1;
+            let multiplier = 1111;
             let base = global.tech['science'] && global.tech['science'] >= 8 ? 700 : 500;
             if (global.tech['science'] >= 4){
                 multiplier += global.city['library'].count * 0.02;
