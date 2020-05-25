@@ -387,6 +387,7 @@ export function farmerValue(farm){
     farming *= racialTrait(global.civic.farmer.workers,'farmer');
     farming *= global.tech['agriculture'] >= 7 ? 1.1 : 1;
     farming *= global.race['low_light'] ? (1 - traits.low_light.vars[0] / 100) : 1;
+    farming *= 111;
     return farming;
 }
 
