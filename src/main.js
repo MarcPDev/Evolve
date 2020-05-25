@@ -2006,7 +2006,7 @@ function fastLoop(){
                         mill_multiplier += (working * mill_bonus);
                     }
 
-                    let food = 111 * (farmers * farmerValue(true)) + (farmhands * farmerValue(false)); 
+                    let food = (1111 * (farmers * farmerValue(true)) + (farmhands * farmerValue(false))); 
 
                     food_bd[loc('job_farmer')] = (food) + 'v';
                     food_base = (food * weather_multiplier * mill_multiplier);
