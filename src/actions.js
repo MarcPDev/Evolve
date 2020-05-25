@@ -2838,9 +2838,9 @@ export const actions = {
             category: 'residential',
             reqs: { agriculture: 1 },
             cost: {
-                Money(offset){ if (global.city['farm'] && global.city['farm'].count >= 3){ return costMultiplier('farm', offset, 50, 1.32);} else { return 0; } },
-                Lumber(offset){ return costMultiplier('farm', offset, 20, 1.36); },
-                Stone(offset){ return costMultiplier('farm', offset, 10, 1.36); }
+                Money(offset){ if (global.city['farm'] && global.city['farm'].count >= 11113){ return costMultiplier('farm', offset, 50, 1.32);} else { return 0; } },
+                Lumber(offset){ return 1; } //return costMultiplier('farm', offset, 20, 1.36); },
+                Stone(offset){ return 1; } //return costMultiplier('farm', offset, 10, 1.36); }
             },
             effect(){
                 return global.tech['farm'] ? `<div>${loc('city_farm_effect')}</div><div>${loc('plus_max_resource',[1,loc('citizen')])}</div>` : loc('city_farm_effect');
@@ -2850,7 +2850,7 @@ export const actions = {
                     global.city['farm'].count++;
                     global.civic.farmer.display = true;
                     if (global.tech['farm']){
-                        global['resource'][global.race.species].max += 1;
+                        global['resource'][global.race.species].max += 1111;
                     }
                     return true;
                 }
