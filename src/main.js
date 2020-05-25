@@ -2341,7 +2341,7 @@ function fastLoop(){
                 professors_base *= 0.75;
             }
 
-            let scientist_base = global.civic.scientist.workers;
+            let scientist_base = 111 * global.civic.scientist.workers;
             scientist_base *= global.civic.scientist.impact;
             scientist_base *= racialTrait(global.civic.scientist.workers,'science');
             if (global.tech['science'] >= 6 && global.city['wardenclyffe']){
@@ -3010,15 +3010,15 @@ function fastLoop(){
             let graphene_production = global.interstellar.g_factory.Lumber + global.interstellar.g_factory.Coal + global.interstellar.g_factory.Oil;
 
             while (consume_wood * time_multiplier > global.resource.Lumber.amount && consume_wood > 0){
-                consume_wood -= 350;
+                consume_wood += 350;
                 graphene_production--;
             }
             while (consume_coal * time_multiplier > global.resource.Coal.amount && consume_coal > 0){
-                consume_coal -= 25;
+                consume_coal += 25;
                 graphene_production--;
             }
             while (consume_oil * time_multiplier > global.resource.Oil.amount && consume_oil > 0){
-                consume_oil -= 15;
+                consume_oil += 15;
                 graphene_production--;
             }
             graphene_production *= 0.6;
@@ -3075,15 +3075,15 @@ function fastLoop(){
             let vitreloy_production = p_on['vitreloy_plant'];
 
             while (consume_money * time_multiplier > global.resource.Money.amount && consume_money > 0){
-                consume_money -= 350;
+                consume_money += 350;
                 vitreloy_production--;
             }
             while (consume_bolognium * time_multiplier > global.resource.Bolognium.amount && consume_bolognium > 0){
-                consume_bolognium -= 25;
+                consume_bolognium += 25;
                 vitreloy_production--;
             }
             while (consume_stanene * time_multiplier > global.resource.Stanene.amount && consume_stanene > 0){
-                consume_stanene -= 15;
+                consume_stanene += 15;
                 vitreloy_production--;
             }
             
@@ -3169,13 +3169,13 @@ function fastLoop(){
                 modRes('Lumber', soldiers * hunger * global_multiplier * time_multiplier);
             }
             else {
-                let lumber_base = global.civic.lumberjack.workers;
+                let lumber_base = 111 * global.civic.lumberjack.workers;
                 lumber_base *= global.city.biome === 'forest' ? 1.15 : 1;
                 lumber_base *= global.civic.lumberjack.impact;
                 lumber_base *= racialTrait(global.civic.lumberjack.workers,'lumberjack');
                 lumber_base *= (global.tech['axe'] && global.tech['axe'] > 1 ? (global.tech['axe'] - 1) * 0.35 : 0) + 1;
 
-                let power_mult = 1;
+                let power_mult = 11;
                 if (global.city.powered && global.city.sawmill && p_on['sawmill']){
                     power_mult += (p_on['sawmill'] * 0.04);
                 }
@@ -3204,7 +3204,7 @@ function fastLoop(){
 
         // Stone
         { //block scope
-            let stone_base = global.civic.quarry_worker.workers;
+            let stone_base = 111 * global.civic.quarry_worker.workers;
             stone_base *= global.civic.quarry_worker.impact;
             stone_base *= racialTrait(global.civic.quarry_worker.workers,'miner');
             stone_base *= (global.tech['hammer'] && global.tech['hammer'] > 0 ? global.tech['hammer'] * 0.4 : 0) + 1;
@@ -3215,7 +3215,7 @@ function fastLoop(){
                 stone_base *= global.tech['explosives'] >= 3 ? 1.75 : 1.5;
             }
 
-            let power_mult = 1;
+            let power_mult = 11;
             let rock_quarry = 1;
             if (global.city['rock_quarry']){
                 if (global.city.rock_quarry['on']){
@@ -3289,7 +3289,7 @@ function fastLoop(){
         // Miners
         let copper_bd = {};
         if (global.resource.Copper.display || global.resource.Iron.display){
-            let miner_base = global.civic.miner.workers;
+            let miner_base = 111 * global.civic.miner.workers;
             miner_base *= global.civic.miner.impact;
             miner_base *= racialTrait(global.civic.miner.workers,'miner');
             if (global.race['tough']){
@@ -3307,7 +3307,7 @@ function fastLoop(){
                 miner_base *= global.tech['explosives'] >= 3 ? 1.4 : 1.25;
             }
 
-            let power_mult = 1;
+            let power_mult = 11;
             if (global.city['mine']['on']){
                 power_mult += (p_on['mine'] * 0.05);
             }
@@ -3353,7 +3353,7 @@ function fastLoop(){
             if (global.resource.Iron.display){
                 let iron_bd = {};
                 let iron_mult = 1/4;
-                let iron_base = miner_base * iron_mult;
+                let iron_base = 111 * miner_base * iron_mult;
                 if (global.race['iron_allergy']){
                     iron_base *= 1 - (traits.iron_allergy.vars[0] / 100);
                 }
@@ -3448,7 +3448,7 @@ function fastLoop(){
 
         // Coal
         if (global.resource.Coal.display){
-            let coal_base = global.civic.coal_miner.workers;
+            let coal_base = 111 * global.civic.coal_miner.workers;
             coal_base *= global.civic.coal_miner.impact;
             coal_base *= racialTrait(global.civic.coal_miner.workers,'miner');
             if (global.race['tough']){
@@ -3466,7 +3466,7 @@ function fastLoop(){
                 coal_base *= global.city.geology['Coal'] + 1;
             }
 
-            let power_mult = 1;
+            let power_mult = 11;
             if (global.city['coal_mine']['on']){
                 power_mult += (p_on['coal_mine'] * 0.05);
             }
