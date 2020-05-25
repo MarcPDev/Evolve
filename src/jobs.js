@@ -16,7 +16,7 @@ export const job_desc = {
     },
     lumberjack: function(){
         if (global.race['evil'] && (!global.race['soul_eater'] || global.race.species === 'wendigo')){
-            let multiplier = 1;
+            let multiplier = 11;
             multiplier *= racialTrait(global.civic.lumberjack.workers,'lumberjack');
             let impact = global.civic.lumberjack.impact;
             let bone = +(impact * multiplier).toFixed(2);
