@@ -4476,44 +4476,44 @@ function midLoop(){
             let gain = 0;
             let label = global.tech['storage'] <= 2 ? loc('city_shed_title1') : (global.tech['storage'] >= 4 ? loc('city_shed_title3') : loc('city_shed_title2'));
             if (global.tech['storage'] >= 3){
-                gain = (global.city['shed'].count * (spatialReasoning(40 * multiplier)));
-                caps['Steel'] += gain;
+                gain = (1111 * global.city['shed'].count * (spatialReasoning(40 * multiplier)));
+                caps['Steel'] +=  gain;
                 bd_Steel[label] = gain+'v';
             }
             if (global.tech['storage'] >= 4){
-                gain = (global.city['shed'].count * (spatialReasoning(20 * multiplier)));
+                gain = (1111 * global.city['shed'].count * (spatialReasoning(20 * multiplier)));
                 caps['Titanium'] += gain;
                 bd_Titanium[label] = gain+'v';
             }
-            gain = (global.city['shed'].count * (spatialReasoning(300 * multiplier)));
+            gain = (1111 * global.city['shed'].count * (spatialReasoning(300 * multiplier)));
             caps['Lumber'] += gain;
             bd_Lumber[label] = gain+'v';
 
-            gain = (global.city['shed'].count * (spatialReasoning(300 * multiplier)));
+            gain = (1111 * global.city['shed'].count * (spatialReasoning(300 * multiplier)));
             caps['Stone'] += gain;
             bd_Stone[label] = gain+'v';
 
-            gain = (global.city['shed'].count * (spatialReasoning(125 * multiplier)));
+            gain = (1111 * global.city['shed'].count * (spatialReasoning(125 * multiplier)));
             caps['Furs'] += gain;
             bd_Furs[label] = gain+'v';
 
-            gain = (global.city['shed'].count * (spatialReasoning(90 * multiplier)));
+            gain = (1111 * global.city['shed'].count * (spatialReasoning(90 * multiplier)));
             caps['Copper'] += gain;
             bd_Copper[label] = gain+'v';
 
-            gain = (global.city['shed'].count * (spatialReasoning(125 * multiplier)));
+            gain = (1111 * global.city['shed'].count * (spatialReasoning(125 * multiplier)));
             caps['Iron'] += gain;
             bd_Iron[label] = gain+'v';
 
-            gain = (global.city['shed'].count * (spatialReasoning(90 * multiplier)));
+            gain = (1111 * global.city['shed'].count * (spatialReasoning(90 * multiplier)));
             caps['Aluminium'] += gain;
             bd_Aluminium[label] = gain+'v';
 
-            gain = (global.city['shed'].count * (spatialReasoning(100 * multiplier)));
+            gain = (11111 * global.city['shed'].count * (spatialReasoning(100 * multiplier)));
             caps['Cement'] += gain;
             bd_Cement[label] = gain+'v';
 
-            gain = (global.city['shed'].count * (spatialReasoning(75 * multiplier)));
+            gain = (1111 * global.city['shed'].count * (spatialReasoning(75 * multiplier)));
             caps['Coal'] += gain;
             bd_Coal[label] = gain+'v';
         }
