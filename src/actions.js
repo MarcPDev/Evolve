@@ -2647,11 +2647,11 @@ export const actions = {
                 Lumber(offset){ return global.race['kindling_kindred'] ? 0 : costMultiplier('basic_housing', offset, 10, 1.23); },
                 Stone(offset){ return global.race['kindling_kindred'] ? costMultiplier('basic_housing', offset, 10, 1.23) : 0; }
             },
-            effect: loc('plus_max_resource',[1,loc('citizen')]),
+            effect: loc('plus_max_resource',[1111,loc('citizen')]),
             action(){
                 if (payCosts($(this)[0].cost)){
                     global['resource'][global.race.species].display = true;
-                    global['resource'][global.race.species].max += 1;
+                    global['resource'][global.race.species].max += 1111;
                     global.city['basic_housing'].count++;
                     global.settings.showCivic = true;
                     return true;
